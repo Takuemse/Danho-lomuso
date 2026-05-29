@@ -1,0 +1,21 @@
+{
+  "name": "danho-lomuso-backend",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {  
+   "dev": "next dev",
+    "migrate": "dotenv -e .env.local -- node migrate.mjs",
+    "db:generate": "dotenv -e .env.local -- drizzle-kit generate",
+    "db:push": "dotenv -e .env.local -- drizzle-kit push",
+    "db:studio": "dotenv -e .env.local -- drizzle-kit studio"
+  },
+  "dependencies": {
+    "drizzle-orm": "^0.45.2",
+    "postgres": "^3.4.9",
+    "dotenv-cli": "^11.0.0"
+  },
+  "devDependencies": {
+    "drizzle-kit": "^0.31.10",
+    "typescript": "^5"
+  }
+}
